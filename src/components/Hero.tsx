@@ -1,4 +1,4 @@
-import heroBg from "@/assets/carnaval_1.JPG";
+import heroBg from "@/assets/carnaval_2.png";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
         <img
           src={heroBg}
           alt="Crianças brasileiras dançando em evento cultural"
-          className="w-full h-full object-cover object-[60%_center] scale-110"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/45 to-foreground/70" />
       </div>
