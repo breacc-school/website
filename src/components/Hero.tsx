@@ -8,7 +8,7 @@ const Hero = () => {
         <img
           src={heroBg}
           alt="Crianças brasileiras dançando em evento cultural"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[60%_center] scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/30 to-foreground/60" />
       </div>
