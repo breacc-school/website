@@ -33,9 +33,9 @@ const Hero = () => {
         </div>
 
         {/* Right — Photo Bubbles */}
-        <div className="flex-1 relative min-h-[400px] md:min-h-[500px] w-full max-w-lg lg:max-w-none">
+        <div className="flex-1 relative min-h-[340px] md:min-h-[420px] w-full max-w-lg lg:max-w-none">
           {/* Large bubble — carnival */}
-          <div className="absolute top-0 right-0 md:right-8 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-2xl z-20">
+          <div className="absolute top-0 right-0 md:right-8 w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary shadow-2xl z-20">
             <img
               src={carnivalPhoto}
               alt="Festa de carnaval do BREACC com bandeira do Brasil"
@@ -44,7 +44,7 @@ const Hero = () => {
           </div>
 
           {/* Medium bubble — team */}
-          <div className="absolute bottom-4 left-0 md:left-4 w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-secondary shadow-2xl z-30">
+          <div className="absolute bottom-4 left-0 md:left-4 w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-2xl z-30">
             <img
               src={teamPhoto}
               alt="Equipe do BREACC com camisetas verdes"
@@ -53,7 +53,7 @@ const Hero = () => {
           </div>
 
           {/* Small bubble — flags */}
-          <div className="absolute top-[55%] right-[5%] md:right-[15%] w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-accent shadow-2xl z-10">
+          <div className="absolute top-[55%] right-[5%] md:right-[15%] w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-accent shadow-2xl z-10">
             <img
               src={flagsPhoto}
               alt="Artesanato com bandeiras do Brasil"
