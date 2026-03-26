@@ -1,6 +1,7 @@
 import teamPhoto from "@/assets/team.jpeg";
 import flagsPhoto from "@/assets/flags.jpg";
 import carnivalPhoto from "@/assets/carnival.png";
+import { scrollToSection } from "@/lib/scroll";
 
 const Hero = () => {
   return (
@@ -19,12 +20,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
               href="#grupos"
+              onClick={(e) => scrollToSection(e, "grupos")}
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-bold text-lg hover:brightness-110 transition-all"
             >
               Conheça nossos grupos
             </a>
             <a
               href="#contato"
+              onClick={(e) => scrollToSection(e, "contato")}
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-bold text-lg hover:bg-primary-foreground/10 transition-all"
             >
               Agende uma visita
@@ -34,8 +37,8 @@ const Hero = () => {
 
         {/* Right — Photo Bubbles */}
         <div className="flex-1 relative min-h-[340px] md:min-h-[420px] w-full max-w-lg lg:max-w-none">
-          {/* Large bubble — carnival */}
-          <div className="absolute top-0 right-0 md:right-8 w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary shadow-2xl z-20">
+          {/* Bubble — carnival */}
+          <div className="absolute top-0 right-0 md:right-8 w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary shadow-2xl z-20">
             <img
               src={carnivalPhoto}
               alt="Festa de carnaval do BREACC com bandeira do Brasil"
@@ -43,8 +46,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* Medium bubble — team */}
-          <div className="absolute bottom-4 left-0 md:left-4 w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-2xl z-30">
+          {/* Bubble — team */}
+          <div className="absolute bottom-4 left-0 md:left-4 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-secondary shadow-2xl z-30">
             <img
               src={teamPhoto}
               alt="Equipe do BREACC com camisetas verdes"
@@ -52,8 +55,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* Small bubble — flags */}
-          <div className="absolute top-[55%] right-[5%] md:right-[15%] w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-accent shadow-2xl z-10">
+          {/* Bubble — flags */}
+          <div className="absolute top-[50%] right-[5%] md:right-[15%] w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-accent shadow-2xl z-10">
             <img
               src={flagsPhoto}
               alt="Artesanato com bandeiras do Brasil"
