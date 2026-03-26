@@ -1,6 +1,7 @@
 import teamPhoto from "@/assets/team.jpeg";
 import flagsPhoto from "@/assets/flags.jpg";
 import carnivalPhoto from "@/assets/carnival.png";
+import { scrollToSection } from "@/lib/scroll";
 
 const Hero = () => {
   return (
@@ -19,12 +20,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
               href="#grupos"
+              onClick={(e) => scrollToSection(e, "grupos")}
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-bold text-lg hover:brightness-110 transition-all"
             >
               Conheça nossos grupos
             </a>
             <a
               href="#contato"
+              onClick={(e) => scrollToSection(e, "contato")}
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-bold text-lg hover:bg-primary-foreground/10 transition-all"
             >
               Agende uma visita
