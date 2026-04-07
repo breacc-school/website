@@ -1,5 +1,4 @@
-import { Music4, Quote } from "lucide-react";
-import { useLanguage } from "@/hooks/use-language";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -24,58 +23,20 @@ const testimonials = [
   },
 ];
 
-const translations = {
-  pt: {
-    heading: "Galeria",
-    subtitle: "Momentos especiais e vozes da comunidade BREACC",
-    playlistTitle: "Playlist BREACC",
-    playlistDescription: "Uma seleção musical para manter viva a conexão com a língua e a cultura brasileira.",
-    playlistCta: "Ouvir playlist",
-  },
-  en: {
-    heading: "Gallery",
-    subtitle: "Special moments and voices from the BREACC community",
-    playlistTitle: "BREACC Playlist",
-    playlistDescription: "A music selection to keep a strong connection with Brazilian language and culture.",
-    playlistCta: "Listen to playlist",
-  },
-};
-
-const playlistUrl = "https://open.spotify.com/";
-
 const Testimonials = () => {
-  const { lang } = useLanguage();
-  const t = translations[lang];
-
   return (
-    <section id="gallery" className="py-24 bg-primary">
+    <section id="testemunhos" className="py-24 bg-primary">
       <div className="container px-4">
         <div className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-            {t.heading}
+            Testemunhos
           </h2>
           <p className="text-lg text-primary-foreground/80">
-            {t.subtitle}
+            O que as famílias dizem sobre o BREACC
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-8 border border-primary-foreground/20">
-            <div className="flex items-center gap-3 mb-4">
-              <Music4 className="w-8 h-8 text-secondary" />
-              <h3 className="font-heading text-2xl font-bold text-primary-foreground">{t.playlistTitle}</h3>
-            </div>
-            <p className="text-primary-foreground/85 leading-relaxed mb-6">{t.playlistDescription}</p>
-            <a
-              href={playlistUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-secondary text-secondary-foreground font-bold px-5 py-3 hover:brightness-110 transition-all"
-            >
-              {t.playlistCta}
-            </a>
-          </div>
-
           {testimonials.map((t, i) => (
             <div
               key={i}
